@@ -1,14 +1,13 @@
 package com.poicom.basic.plugin.mail;
 
+import org.apache.commons.mail.EmailAttachment;
+import org.apache.commons.mail.EmailException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadFactory;
-
-import org.apache.commons.mail.EmailAttachment;
-import org.apache.commons.mail.EmailException;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class ExecutorMailer {
 	
@@ -149,7 +148,6 @@ public class ExecutorMailer {
 		};
 	}
 
-	@Test
 	public void test(){
 		MailerPlugin mailerPlugin = new MailerPlugin();
 		boolean result =mailerPlugin.start();

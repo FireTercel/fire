@@ -1,14 +1,10 @@
 package com.poicom.basic.kit;
 
+import com.jfinal.log.Logger;
+import org.apache.commons.codec.binary.Base64;
+
 import java.io.UnsupportedEncodingException;
 import java.util.regex.Pattern;
-
-import org.apache.commons.codec.DecoderException;
-import org.apache.commons.codec.EncoderException;
-import org.apache.commons.codec.binary.Base64;
-import org.junit.Test;
-
-import com.jfinal.log.Logger;
 
 /**
  * 
@@ -185,9 +181,7 @@ public class StringKit {
 		}
 		return p.toString();
 	}
-	
-	
-	@Test
+
 	public void test(){
 		Base64 base64 = new Base64();
 		String str="中文";

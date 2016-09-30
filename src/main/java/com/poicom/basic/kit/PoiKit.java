@@ -1,6 +1,11 @@
 package com.poicom.basic.kit;
 
-import java.io.FileNotFoundException;
+import com.google.common.collect.Lists;
+import com.jfinal.ext.kit.excel.PoiExporter;
+import com.jfinal.plugin.activerecord.Record;
+import org.apache.poi.hssf.usermodel.*;
+import org.apache.poi.poifs.filesystem.POIFSFileSystem;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,18 +14,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFDateUtil;
-import org.apache.poi.hssf.usermodel.HSSFRow;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.poifs.filesystem.POIFSFileSystem;
-import org.junit.Test;
-
-import com.google.common.collect.Lists;
-import com.jfinal.ext.kit.excel.PoiExporter;
-import com.jfinal.plugin.activerecord.Record;
 
 public class PoiKit {
 	private static POIFSFileSystem fs; 
@@ -33,7 +26,7 @@ public class PoiKit {
 	/**
 	 * 读取Excel表格表头的内容
 	 * 
-	 * @param InputStream
+	 * @param is
 	 * @return String 表头内容的数组
 	 */
 	@SuppressWarnings("deprecation")
@@ -59,7 +52,7 @@ public class PoiKit {
 	/**
 	 * 读取Excel数据内容
 	 * 
-	 * @param InputStream
+	 * @param is
 	 * @return Map 包含单元格数据内容的Map对象
 	 */
 	@SuppressWarnings("deprecation")
@@ -141,8 +134,7 @@ public class PoiKit {
 		return cellvalue;
 
 	}
-	
-	@Test
+
 	public void test() throws IOException{
 		String url = "E:\\test.xls";
 		Record[] records=new Record[10];

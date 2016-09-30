@@ -1,18 +1,16 @@
 package com.poicom.function.notice;
 
+import com.poicom.basic.kit.StringKit;
+import com.poicom.function.model.NoticeSms;
+import org.joda.time.DateTime;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
-
-import org.joda.time.DateTime;
-import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import com.poicom.basic.kit.StringKit;
-import com.poicom.function.model.NoticeSms;
 
 /**
  * 发送短信
@@ -108,8 +106,7 @@ public class SmsSender implements Sender {
 		}
 		return 0;
 	}
-	
-	@Test
+
 	public void test(){
 		String[] str = new String[]{"15900088260","18924518660","15574998546", "15815729271", "13715689614", "13590963226", "18688112112", "15602820055", "13415347240", "18207609337", "15089947635", "18676196968", "15917232704", "13424567023", "15017349221", "13824710793", "15973398234", "15602597861", "18919649659", "13257912939", "18975814016", "15873114629", "18983860002", "15905535145", "18856935949", "13767498841", "15256933378", "18356972754", "15905694927", "15979059418", "15070371822", "13755753113", "18870066595", "13767012721", "13870848533", "18898216057", "13635411032", "15973155581", "13755003972", "13874931300", "13973111883", "13667319698", "13786153705", "15367899085", "13807312394", "13203157423", "18256527157", "13527185129"};
 		sendSms("尊敬的用户，话务部的章佳微于2015-08-05 19:11:12，提交关于“易百年手机不能拨打电话”的故障单。现由软件研发部的陈宇佳处理完毕，详情请登陆系统查看。",str);

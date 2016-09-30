@@ -1,20 +1,15 @@
 package com.poicom.basic.kit;
 
+import cn.dreampie.ValidateKit;
+import cn.dreampie.mail.ExecutorMailer;
+import cn.dreampie.mail.MailerPlugin;
+import org.apache.commons.mail.EmailException;
+
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Enumeration;
-
-import org.apache.commons.mail.EmailException;
-import org.junit.Test;
-
-import cn.dreampie.ValidateKit;
-import cn.dreampie.akka.AkkaPlugin;
-import cn.dreampie.mail.AkkaMailer;
-import cn.dreampie.mail.ExecutorMailer;
-import cn.dreampie.mail.Mailer;
-import cn.dreampie.mail.MailerPlugin;
 
 public class _TestKit {
 	
@@ -65,8 +60,7 @@ public class _TestKit {
 			}
 		}
 	}
-	
-	@Test
+
 	public void t_mail(){
 		MailerPlugin mailerPlugin = new MailerPlugin();
 		boolean result =mailerPlugin.start();

@@ -1,12 +1,9 @@
 package com.poicom.function.notice;
 
-import org.junit.Test;
-
-import com.poicom.function.notice.factory.*;
+import com.poicom.function.notice.factory.SendMailFactory;
 
 public class TestSender {
-	
-	@Test
+
 	public void test(){
 		Provider provider = new SendMailFactory();
 		Sender sender = provider.produce();

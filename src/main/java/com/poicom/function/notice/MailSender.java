@@ -2,7 +2,6 @@ package com.poicom.function.notice;
 
 import org.apache.commons.mail.EmailException;
 import org.joda.time.DateTime;
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -70,8 +69,7 @@ public class MailSender implements Sender {
 			e.printStackTrace();
 		}
 	}
-	
-	@Test
+
 	public void test(){
 		MailerPlugin mailer = new MailerPlugin();
 		mailer.start();

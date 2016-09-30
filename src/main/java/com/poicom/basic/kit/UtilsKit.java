@@ -1,12 +1,11 @@
 package com.poicom.basic.kit;
 
+import org.apache.log4j.Logger;
+
 import java.text.DecimalFormat;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
-
-import org.apache.log4j.Logger;
-import org.junit.Test;
 
 public class UtilsKit {
 	
@@ -36,8 +35,7 @@ private static Logger log= Logger.getLogger(UtilsKit.class);
 		}
 		return uuid;
 	}
-	
-	@Test
+
 	public void test(){
 		Set<String> set = new HashSet<String>();
 		long start = System.currentTimeMillis();
